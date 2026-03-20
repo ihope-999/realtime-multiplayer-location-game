@@ -1,12 +1,41 @@
-﻿# Place-Guessing
-Multi-player game utilizing Google Maps.
-How to run this application:
-1. Ensure you have docker installed
-2.  ```docker compose up --build```
-3. Navigate to http://127.0.0.1:5000/ in your web browser to access the application.
+# Location Guessing Game
+
+A real-time multiplayer web game where players compete to guess 
+locations on Google Maps. Built with C# and ASP.NET Core, featuring 
+live interactions powered by SignalR.
+
+## Features
+
+- **Real-time multiplayer** — players interact live using SignalR WebSockets
+- **Google Maps integration** — locations fetched and displayed via Google Maps API
+- **Role-based system** — Admin and User roles with different permissions
+- **Secure authentication** — login system with role management
+- **Containerized** — runs fully in Docker with a single command
+
+## Tech Stack
+
+- **Backend:** C# / ASP.NET Core
+- **Real-time:** SignalR
+- **Database:** PostgreSQL (containerized)
+- **API:** Google Maps API
+- **Infrastructure:** Docker 
+- **Frontend:** HTML, CSS
 
 
-the application will be seeded with 3 users:
-- username: admin, password: admin, role: Admin
-- username: john, password: john, role: User/Player
-- username: ola, password: ola, role: User/Player
+Navigate to **http://127.0.0.1:5000** in your browser.
+
+### Demo accounts
+
+| Username | Password | Role |
+|----------|----------|------|
+| admin | admin | Admin |
+| john | john | Player |
+| ola | ola | Player |
+
+## Architecture
+
+- ASP.NET Core backend handles game logic and user management
+- SignalR hub manages real-time communication between players
+- PostgreSQL stores users, roles, and game data
+- Google Maps API provides location data for each round
+- Docker Compose orchestrates all services together
