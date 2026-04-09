@@ -39,3 +39,5 @@ Navigate to **http://127.0.0.1:5000** in your browser.
 - PostgreSQL stores users, roles, and game data
 - Google Maps API provides location data for each round
 - Docker Compose orchestrates all services together
+
+- more will be added
